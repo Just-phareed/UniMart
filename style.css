@@ -83,3 +83,47 @@ nav button{
     width:180px;
     box-shadow:0 5px 20px #ddd;
 }
+
+
+.market{
+    padding:50px;
+}
+
+
+.products{
+    display:flex;
+    gap:25px;
+    margin-top:20px;
+}
+
+
+.product-card{
+
+    background:white;
+    padding:25px;
+    width:250px;
+    border-radius:15px;
+    box-shadow:0 5px 20px #ddd;
+
+}
+
+
+.product-card p{
+
+    color:#2563eb;
+    font-size:22px;
+    margin:15px 0;
+
+}
+
+
+.product-card button{
+
+    margin-top:20px;
+    background:#111827;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+
+}
