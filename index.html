@@ -2,187 +2,88 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>UniMart</title>
 
 <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
-
 <nav>
 
-<div class="logo">
-🛒 UniMart
-</div>
-
+<div class="logo">🛒 UniMart</div>
 
 <div class="nav-links">
-
-<a href="index.html">
-Home
-</a>
-
-
-<a href="post.html">
-Sell
-</a>
-
-
-<a href="#">
-About
-</a>
-
-
+<a href="index.html">Home</a>
+<a href="post.html">Sell</a>
+<a href="#">About</a>
 </div>
-
 
 </nav>
 
-
-
 <section class="hero">
 
-<h1>
-Buy & Sell Around Campus
-</h1>
+<h1>Buy & Sell Around Campus</h1>
 
+<p>The easiest marketplace for students</p>
 
-<p>
-The easiest marketplace for students
-</p>
-
-
-<input 
-class="search"
-placeholder="Search items...">
-
+<input class="search" id="searchInput" placeholder="Search items...">
 
 </section>
 
-
-
-
+<!-- CATEGORIES -->
 <section class="categories">
 
-
-<h2>
-Categories
-</h2>
-
+<h2>Categories</h2>
 
 <br>
 
-
 <div class="cards">
 
-
-<div class="card">
-📱 Phones
-</div>
-
-
-<div class="card">
-💻 Laptops
-</div>
-
-
-<div class="card">
-👕 Clothes
-</div>
-
-
-<div class="card">
-📚 Books
-</div>
-
+<div class="card">📱 Phones</div>
+<div class="card">💻 Laptops</div>
+<div class="card">👕 Clothes</div>
+<div class="card">📚 Books</div>
 
 </div>
-
 
 </section>
 
+<!-- PRODUCTS -->
 <section class="market">
 
-<h2>
-Latest Items
-</h2>
-
+<h2>Latest Items</h2>
 
 <div class="products">
 
+<div class="product-card" data-name="iphone">
 
-<div class="product-card">
-
-<h3>
-iPhone 12
-</h3>
-
-<p>
-₦250,000
-</p>
-
-<span>
-Faculty: Engineering
-</span>
-
-<button>
-Contact Seller
-</button>
+<h3>iPhone 12</h3>
+<p>₦250,000</p>
+<span>Faculty: Engineering</span>
+<button>Contact Seller</button>
 
 </div>
 
+<div class="product-card" data-name="laptop">
 
-
-<div class="product-card">
-
-<h3>
-HP Laptop
-</h3>
-
-<p>
-₦180,000
-</p>
-
-<span>
-Faculty: Computer Science
-</span>
-
-<button>
-Contact Seller
-</button>
+<h3>HP Laptop</h3>
+<p>₦180,000</p>
+<span>Faculty: Computer Science</span>
+<button>Contact Seller</button>
 
 </div>
 
+<div class="product-card" data-name="sneakers">
 
-
-<div class="product-card">
-
-<h3>
-Nike Sneakers
-</h3>
-
-<p>
-₦25,000
-</p>
-
-<span>
-Faculty: Business
-</span>
-
-<button>
-Contact Seller
-</button>
+<h3>Nike Sneakers</h3>
+<p>₦25,000</p>
+<span>Faculty: Business</span>
+<button>Contact Seller</button>
 
 </div>
-
 
 </div>
 
@@ -190,23 +91,15 @@ Contact Seller
 
 <footer>
 
-<h3>
-UniMart
-</h3>
+<h3>UniMart</h3>
 
-<p>
-Student marketplace built for campus life.
-</p>
+<p>Student marketplace built for campus life.</p>
 
-<p>
-© 2026 UniMart
-</p>
+<p>© 2026 UniMart</p>
 
 </footer>
 
 <script src="script.js"></script>
 
-
 </body>
-
 </html>
