@@ -12,27 +12,40 @@ body{
 
 
 nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 60px;
-    background:white;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:white;
+box-shadow:0 5px 15px #eee;
+
 }
 
 
 .logo{
-    font-size:25px;
-    font-weight:bold;
-    color:#2563eb;
+
+font-size:28px;
+font-weight:bold;
+color:#2563eb;
+
 }
 
 
-nav button{
-    background:#2563eb;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:8px;
+.nav-links{
+
+display:flex;
+gap:25px;
+
+}
+
+
+.nav-links a{
+
+text-decoration:none;
+color:#333;
+font-weight:bold;
+
 }
 
 
@@ -47,7 +60,19 @@ nav button{
 
 
 .hero h1{
-    font-size:50px;
+
+font-size:55px;
+max-width:700px;
+
+background:linear-gradient(
+90deg,
+#2563eb,
+#9333ea
+);
+
+-webkit-background-clip:text;
+color:transparent;
+
 }
 
 
@@ -232,5 +257,21 @@ background:#111827;
 color:white;
 text-align:center;
 padding:30px;
+
+}
+
+
+.product-card,
+.card{
+
+transition:0.3s;
+
+}
+
+
+.product-card:hover,
+.card:hover{
+
+transform:translateY(-10px);
 
 }
