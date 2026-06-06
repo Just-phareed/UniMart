@@ -127,3 +127,110 @@ nav button{
     border-radius:8px;
 
 }
+
+.post-section{
+
+padding:60px;
+text-align:center;
+
+}
+
+
+form{
+
+display:flex;
+flex-direction:column;
+gap:20px;
+max-width:400px;
+margin:auto;
+
+}
+
+
+form input,
+form select,
+form textarea{
+
+padding:15px;
+border-radius:10px;
+border:1px solid #ddd;
+
+}
+
+
+form button{
+
+background:#2563eb;
+color:white;
+border:none;
+padding:15px;
+border-radius:10px;
+
+}
+
+@media (max-width:768px){
+
+
+nav{
+
+padding:20px;
+}
+
+
+.hero h1{
+
+font-size:35px;
+
+}
+
+
+.search{
+
+width:90%;
+
+}
+
+
+.cards,
+.products{
+
+flex-direction:column;
+align-items:center;
+
+}
+
+
+.card,
+.product-card{
+
+width:90%;
+
+}
+
+
+.categories,
+.market{
+
+padding:30px 15px;
+
+}
+
+
+.post-section{
+
+padding:30px 15px;
+
+}
+
+
+}
+
+footer{
+
+margin-top:50px;
+background:#111827;
+color:white;
+text-align:center;
+padding:30px;
+
+}
