@@ -29,3 +29,7 @@ UniMart helps students easily find and sell items within their campus community.
 - Payment integration
 - Notifications
 - Mobile app
+
+## 🌍 Live Demo
+
+https://unimart-34959.web.app
