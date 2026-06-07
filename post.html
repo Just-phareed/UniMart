@@ -4,10 +4,9 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Post Item - UniMart</title>
+<title>Sell - UniMart</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -20,14 +19,17 @@
 <nav>
 
 <div class="logo">
-UniMart
+🛒 UniMart
 </div>
 
+
+<div class="nav-links">
 
 <a href="index.html">
 Home
 </a>
 
+</div>
 
 </nav>
 
@@ -38,56 +40,81 @@ Home
 
 
 <h1>
-Sell Your Item
+Sell Your Item 🚀
 </h1>
 
 
-<form>
+<form id="postForm">
 
 
 <input 
 type="text"
-placeholder="Item name">
+id="itemName"
+placeholder="Item name"
+required>
+
 
 
 <input 
-type="text"
-placeholder="Price">
+type="number"
+id="itemPrice"
+placeholder="Price (₦)"
+required>
 
 
-<select>
 
-<option>
+
+<select id="itemCategory">
+
+
+<option value="general">
 Choose Category
 </option>
 
-<option>
+
+<option value="phone">
 Phones
 </option>
 
-<option>
+
+<option value="laptop">
 Laptops
 </option>
 
-<option>
+
+<option value="clothes">
 Clothes
 </option>
 
-<option>
+
+<option value="books">
 Books
 </option>
+
 
 </select>
 
 
 
-<textarea
+
+<input
+type="text"
+id="itemImage"
+placeholder="Paste image URL (optional)">
+
+
+
+
+
+<textarea 
+id="itemDesc"
 placeholder="Describe your item">
 </textarea>
 
 
 
-<button>
+
+<button type="submit">
 Post Item
 </button>
 
@@ -96,8 +123,13 @@ Post Item
 </form>
 
 
+
 </section>
 
+
+
+
+<script type="module" src="script.js"></script>
 
 
 </body>

@@ -2,104 +2,292 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>UniMart</title>
 
 <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
+
 <nav>
 
-<div class="logo">🛒 UniMart</div>
+<div class="logo">
+🛒 UniMart
+</div>
+
 
 <div class="nav-links">
-<a href="index.html">Home</a>
-<a href="post.html">Sell</a>
-<a href="#">About</a>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="post.html">
+Sell
+</a>
+
+<a href="#">
+About
+</a>
+
+<button onclick="logout()">
+Logout
+</button>
+
+
 </div>
+
 
 </nav>
 
+
+
 <section class="hero">
 
-<h1>Buy & Sell Around Campus</h1>
 
-<p>The easiest marketplace for students</p>
+<h1>
+Buy & Sell Around Campus
+</h1>
 
-<input class="search" id="searchInput" placeholder="Search items...">
+
+<p>
+The easiest marketplace for students
+</p>
+
+
+
+<input 
+class="search"
+id="searchInput"
+placeholder="Search items...">
+
 
 </section>
 
-<!-- CATEGORIES -->
+
+
+
 <section class="categories">
 
-<h2>Categories</h2>
+
+<h2>
+Categories
+</h2>
+
 
 <br>
 
+
 <div class="cards">
 
-<div class="card">📱 Phones</div>
-<div class="card">💻 Laptops</div>
-<div class="card">👕 Clothes</div>
-<div class="card">📚 Books</div>
+
+<div class="card">
+📱 Phones
+</div>
+
+
+<div class="card">
+💻 Laptops
+</div>
+
+
+<div class="card">
+👕 Clothes
+</div>
+
+
+<div class="card">
+📚 Books
+</div>
+
 
 </div>
 
+
 </section>
 
-<!-- PRODUCTS -->
+
+
+
+
 <section class="market">
 
-<h2>Latest Items</h2>
 
-<div class="products">
+<h2>
+Latest Items
+</h2>
 
-<div class="product-card" data-name="iphone">
 
-<h3>iPhone 12</h3>
-<p>₦250,000</p>
-<span>Faculty: Engineering</span>
-<button>Contact Seller</button>
 
-</div>
+<div 
+class="products"
+id="products">
 
-<div class="product-card" data-name="laptop">
 
-<h3>HP Laptop</h3>
-<p>₦180,000</p>
-<span>Faculty: Computer Science</span>
-<button>Contact Seller</button>
+<!-- Firebase products appear here -->
 
 </div>
 
-<div class="product-card" data-name="sneakers">
 
-<h3>Nike Sneakers</h3>
-<p>₦25,000</p>
-<span>Faculty: Business</span>
-<button>Contact Seller</button>
-
-</div>
-
-</div>
 
 </section>
+
+
+
+
 
 <footer>
 
-<h3>UniMart</h3>
 
-<p>Student marketplace built for campus life.</p>
+<h3>
+UniMart
+</h3>
 
-<p>© 2026 UniMart</p>
+
+<p>
+Student marketplace built for campus life.
+</p>
+
+
+<p>
+© 2026 UniMart
+</p>
+
 
 </footer>
 
+
+
+
+
+<!-- Firebase -->
+
+<script type="module">
+
+import { initializeApp } 
+from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+
+
+import { 
+getFirestore,
+collection,
+getDocs
+} 
+from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+
+
+const firebaseConfig = {
+
+apiKey: "AIzaSyDLWy48kGrrraPUDi4QljMuWUfXnOYr5Lg",
+
+authDomain: "unimart-34959.firebaseapp.com",
+
+projectId: "unimart-34959",
+
+storageBucket: "unimart-34959.firebasestorage.app",
+
+messagingSenderId: "522549272773",
+
+appId: "1:522549272773:web:b4b8f931c6c64cf2a250ac"
+
+};
+
+
+
+const app = initializeApp(firebaseConfig);
+
+
+const db = getFirestore(app);
+
+
+
+const productsBox =
+document.getElementById("products");
+
+
+
+const snapshot =
+await getDocs(collection(db,"products"));
+
+
+
+snapshot.forEach((doc)=>{
+
+
+const item = doc.data();
+
+
+
+productsBox.innerHTML += `
+
+
+<div class="product-card">
+
+
+<img 
+src="${item.image || 'https://via.placeholder.com/250'}"
+style="width:100%;border-radius:10px;">
+
+
+
+<h3>
+${item.name}
+</h3>
+
+
+
+<p>
+₦${item.price}
+</p>
+
+
+
+<span>
+${item.category}
+</span>
+
+
+<br>
+
+
+<p>
+Seller: ${item.seller || "Student"}
+</p>
+
+
+
+<button onclick="alert('Chat feature coming soon 🔥')">
+Contact Seller
+</button>
+
+
+
+</div>
+
+
+`;
+
+
+});
+
+
+
+</script>
+
+
+
 <script src="script.js"></script>
 
+
+
 </body>
+
 </html>
